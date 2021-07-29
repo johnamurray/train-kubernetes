@@ -10,7 +10,8 @@ module TrainPlugins
       def initialize(options)
         super(options)
 
-        parse_kubeconfig
+        #parse_kubeconfig
+        @client = K8s::Client.autoconfig()
         connect
       end
 
